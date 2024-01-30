@@ -1,0 +1,10 @@
+version: '3'
+services:
+  production:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vue-app:prod
+    container_name: my-vue-app-prod
+    ports:
+      - "8080:80"

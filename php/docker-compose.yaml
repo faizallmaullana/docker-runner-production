@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  my-php-app:
+    container_name: php-app
+    build: .
+    ports:
+      - 8080:80
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=secret
+    image: my-php-app
